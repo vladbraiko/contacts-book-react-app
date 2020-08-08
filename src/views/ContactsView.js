@@ -5,12 +5,12 @@ import Filter from '../components/Filter';
 
 const ContactsView = () => (
   <>
+    <div>
+      <ContactForm />
+    </div>
     <Filter />
     <div>
       <ContactList />
-    </div>
-    <div>
-      <ContactForm />
     </div>
   </>
 );

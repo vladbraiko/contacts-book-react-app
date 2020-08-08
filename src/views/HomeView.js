@@ -2,12 +2,7 @@ import React from 'react';
 
 const HomeView = () => (
   <div>
-    <h1>
-      Приветственная страница нашего сервиса
-      <span role="img" aria-label="Иконка приветствия">
-        💁‍♀️
-      </span>
-    </h1>
+    <h1>Phonne Book</h1>
   </div>
 );
 
