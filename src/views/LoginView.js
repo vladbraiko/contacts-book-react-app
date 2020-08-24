@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { logIn } from '../redux/auth/auth-operations';
+import Input from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+import { NavLink } from 'react-router-dom';
 
 const styles = {
   form: {
@@ -37,34 +40,42 @@ class LoginView extends Component {
     return (
       <div>
         <h1>Login</h1>
-
         <form
           onSubmit={this.handleSubmit}
           style={styles.form}
           autoComplete="off"
         >
-          <label style={styles.label}>
-            Email
-            <input
-              type="email"
-              name="email"
-              value={email}
-              onChange={this.handleChange}
-            />
-          </label>
+          <Input
+            id="standard-basic"
+            label="Email"
+            type="email"
+            name="email"
+            value={email}
+            onChange={this.handleChange}
+          />
 
-          <label style={styles.label}>
-            Password
-            <input
-              type="password"
-              name="password"
-              value={password}
-              onChange={this.handleChange}
-            />
-          </label>
+          <Input
+            id="standard-basic"
+            label="Password"
+            type="password"
+            name="password"
+            value={password}
+            onChange={this.handleChange}
+          />
 
-          <button type="submit">Войти</button>
+          <Button type="submit" variant="outlined" color="primary">
+            Log In
+          </Button>
         </form>
+        нет аккаунта? зарегайтесь
+        <NavLink
+          to="/register"
+          exact
+          style={styles.link}
+          activeStyle={styles.activeLink}
+        >
+          Sign Up
+        </NavLink>
       </div>
     );
   }

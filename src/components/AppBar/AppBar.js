@@ -1,7 +1,6 @@
 import React from 'react';
 import Navigation from './Navigation';
 import UserMenu from './UserMenu';
-import AuthNav from './AuthNav';
 import { connect } from 'react-redux';
 import { getIsAuthenticated } from '../../redux/auth/auth-selectors';
 
@@ -17,7 +16,7 @@ const styles = {
 const AppBar = ({ isAuthenticated }) => (
   <header style={styles.header}>
     <Navigation />
-    {isAuthenticated ? <UserMenu /> : <AuthNav />}
+    {isAuthenticated && <UserMenu />}
   </header>
 );
 

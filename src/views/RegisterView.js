@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import { register } from '../redux/auth/auth-operations';
+import Input from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 const styles = {
   form: {
@@ -38,44 +41,51 @@ class RegisterView extends Component {
     return (
       <div>
         <h1>Sign Up</h1>
-
         <form
           onSubmit={this.handleSubmit}
           style={styles.form}
           autoComplete="off"
         >
-          <label style={styles.label}>
-            Name
-            <input
-              type="text"
-              name="name"
-              value={name}
-              onChange={this.handleChange}
-            />
-          </label>
+          <Input
+            id="standard-basic"
+            label="Name"
+            type="text"
+            name="name"
+            value={name}
+            onChange={this.handleChange}
+          />
 
-          <label style={styles.label}>
-            Email
-            <input
-              type="email"
-              name="email"
-              value={email}
-              onChange={this.handleChange}
-            />
-          </label>
+          <Input
+            id="standard-basic"
+            label="Email"
+            type="email"
+            name="email"
+            value={email}
+            onChange={this.handleChange}
+          />
 
-          <label style={styles.label}>
-            Password
-            <input
-              type="password"
-              name="password"
-              value={password}
-              onChange={this.handleChange}
-            />
-          </label>
+          <Input
+            id="standard-basic"
+            label="Password"
+            type="password"
+            name="password"
+            value={password}
+            onChange={this.handleChange}
+          />
 
-          <button type="submit">Sign Up</button>
+          <Button type="submit" variant="outlined" color="primary">
+            Sign Up
+          </Button>
         </form>
+        Уже есть аккаунт? войдите
+        <NavLink
+          to="/login"
+          exact
+          style={styles.link}
+          activeStyle={styles.activeLink}
+        >
+          Log In
+        </NavLink>
       </div>
     );
   }
