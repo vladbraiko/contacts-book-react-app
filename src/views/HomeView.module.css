@@ -1,0 +1,23 @@
+.homeView {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 70px;
+  margin: 0;
+}
+
+.descriptionTitle {
+  padding-left: 5px;
+}
+
+.authNav {
+  width: 300px;
+}

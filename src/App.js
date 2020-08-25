@@ -5,6 +5,7 @@ import AppBar from './components/AppBar/AppBar';
 import PrivateRout from './components/PrivateRout';
 import PublicRout from './components/PublicRout';
 import { getCurrentUser } from './redux/auth/auth-operations';
+import styles from './App.module.css';
 
 const HomeView = lazy(() => import('./views/HomeView'));
 const RegisterView = lazy(() => import('./views/RegisterView'));
@@ -18,7 +19,7 @@ class App extends Component {
 
   render() {
     return (
-      <>
+      <div className={styles.container}>
         <AppBar />
         <Suspense fallback={<p>Loading...</p>}>
           <Switch>
@@ -42,7 +43,7 @@ class App extends Component {
             />
           </Switch>
         </Suspense>
-      </>
+      </div>
     );
   }
 }

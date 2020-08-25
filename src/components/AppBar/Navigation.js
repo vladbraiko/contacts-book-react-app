@@ -2,19 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getIsAuthenticated } from '../../redux/auth/auth-selectors';
-
-const styles = {
-  link: {
-    display: 'inline-block',
-    textDecoration: 'none',
-    padding: 12,
-    fontWeight: 700,
-    color: '#2A363B',
-  },
-  activeLink: {
-    color: '#E84A5F',
-  },
-};
+import styles from './Navigation.module.css';
 
 const Navigation = ({ isAuthenticated }) => (
   <nav>
@@ -28,7 +16,7 @@ const Navigation = ({ isAuthenticated }) => (
         My contacts
       </NavLink>
     ) : (
-      <NavLink to="/" exact style={styles.link} activeStyle={styles.activeLink}>
+      <NavLink to="/" exact className={styles.home}>
         Home
       </NavLink>
     )}

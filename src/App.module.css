@@ -1,5 +1,6 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  padding: 50px;
+  margin: -8px;
+  min-height: 100vh;
+  background: linear-gradient(0.25turn, #c77b94, #9198e5);
+  font-family: 'Nanum Gothic', sans-serif;
 }

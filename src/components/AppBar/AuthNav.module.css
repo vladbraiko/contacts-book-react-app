@@ -1,0 +1,12 @@
+.navLinks {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.authNav {
+  display: 'inline-block';
+  text-decoration: none;
+  padding: 12;
+  color: #ffffff;
+}
