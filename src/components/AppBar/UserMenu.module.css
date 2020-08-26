@@ -1,22 +1,24 @@
-.wrapper {
-  width: 300px;
-  padding: 50px 110px 50px 0;
-  border-right: 1px solid rgba(255, 255, 255, 0.4);
-  margin-top: -70px;
+.container {
+  min-width: 200px;
+  line-height: 26px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  margin-left: 910px;
 }
 
 .button {
-  width: 110px;
+  width: 80px;
   text-decoration: none;
-  background-color: inherit;
+  padding: 5px;
   color: #ffffff;
-  padding: 10px;
+  font-size: 16px;
   transition: 0.2s;
   border: 1px solid #ffffff;
   border-radius: 10px;
   text-align: center;
-  font-size: 16px;
-  margin-top: 15px;
+  margin-left: 25px;
+  background-color: inherit;
   cursor: pointer;
 }
 
@@ -24,8 +26,4 @@
   color: rgba(255, 255, 255, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.4);
   transition: 0.2s;
-}
-
-.input {
-  margin-bottom: 25px;
 }

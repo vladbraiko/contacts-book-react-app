@@ -4,18 +4,30 @@
 }
 
 .content {
-  width: 1000px;
+  width: 900px;
+  padding: 50px 50px;
   display: flex;
   justify-content: space-between;
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  align-items: center;
 }
 
 .title {
   font-size: 70px;
   margin: 0;
+  margin-bottom: 15px;
 }
 
 .descriptionTitle {
   padding-left: 5px;
+  margin: 0;
+}
+
+.description {
+  width: 300px;
+  line-height: 26px;
+  margin-bottom: 30px;
+  font-size: 18px;
 }
 
 .authNav {

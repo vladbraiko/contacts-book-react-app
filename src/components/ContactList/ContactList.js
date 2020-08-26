@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes, { shape } from 'prop-types';
 import ContactItem from './ContactItem';
-import styles from './ContactList.module.css';
 import { connect } from 'react-redux';
 import {
   deleteContact,
   fetchContacts,
 } from '../../redux/phoneBook/phoneBook-operations';
 import { getFilteredContacts } from '../../redux/phoneBook/phoneBook-selectors';
+import styles from './ContactList.module.css';
 
 class ContactList extends Component {
   componentDidMount() {
@@ -17,9 +17,9 @@ class ContactList extends Component {
   render() {
     const { filteredContacts, onDelete } = this.props;
     return (
-      <ul>
+      <ul className={styles.contacts}>
         {filteredContacts.map(item => (
-          <li key={item.id} className={styles.contact}>
+          <li key={item.id}>
             <ContactItem
               name={item.name}
               number={item.number}

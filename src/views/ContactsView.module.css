@@ -1,0 +1,18 @@
+.container {
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 auto;
+}
+
+.aside {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 120px;
+}
+
+.contactsList {
+  margin-top: 20px;
+}

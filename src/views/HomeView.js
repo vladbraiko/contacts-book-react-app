@@ -6,14 +6,14 @@ const HomeView = () => (
   <div className={styles.homeView}>
     <div className={styles.content}>
       <div>
-        <h1 className={styles.title}>Phonne Book</h1>
+        <h1 className={styles.title}>Contacts Book</h1>
         <p className={styles.descriptionTitle}>
           is a secure place for saving your contacts.
         </p>
       </div>
-      <div className={styles.authNav}>
+      <div>
         <p className={styles.description}>
-          Create an account for start using or sign in if you already have ones.
+          Create an account for start or sign in if you already have ones.
         </p>
         <AuthNav />
       </div>

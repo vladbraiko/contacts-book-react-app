@@ -1,6 +1,6 @@
 .container {
-  margin: -8px;
   min-height: 100vh;
   background: linear-gradient(0.25turn, #c77b94, #9198e5);
   font-family: 'Nanum Gothic', sans-serif;
+  color: #000000c2;
 }

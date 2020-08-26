@@ -4,16 +4,16 @@ import styles from './ContactList.module.css';
 
 function ContactItem({ name, number, id, onDelete }) {
   return (
-    <>
+    <span className={styles.contact}>
       {name}: {number}
       <button
-        className={styles.remove_contact_btn}
+        className={styles.button}
         type="button"
         onClick={() => onDelete(id)}
       >
         Delete
       </button>
-    </>
+    </span>
   );
 }
 

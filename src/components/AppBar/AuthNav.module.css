@@ -7,6 +7,16 @@
 .authNav {
   display: 'inline-block';
   text-decoration: none;
-  padding: 12;
+  padding: 5px;
   color: #ffffff;
+  padding-bottom: 7px;
+  transition: 0.2s;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+}
+
+.authNav:hover {
+  color: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: 0.2s;
 }

@@ -3,18 +3,7 @@ import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { register } from '../redux/auth/auth-operations';
 import Input from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
-
-const styles = {
-  form: {
-    width: 320,
-  },
-  label: {
-    display: 'flex',
-    flexDirection: 'column',
-    marginBottom: 15,
-  },
-};
+import styles from './Form.module.css';
 
 class RegisterView extends Component {
   state = {
@@ -39,53 +28,59 @@ class RegisterView extends Component {
     const { name, email, password } = this.state;
 
     return (
-      <div>
-        <h1>Sign Up</h1>
+      <div className={styles.container}>
+        <div className={styles.aside}>
+          <h1 className={styles.title}>Sign Up</h1>
+          <span className={styles.description}>Already have an account?</span>
+          <NavLink to="/login" exact className={styles.button}>
+            Log In
+          </NavLink>
+        </div>
+
         <form
           onSubmit={this.handleSubmit}
-          style={styles.form}
           autoComplete="off"
+          className={styles.form}
         >
-          <Input
-            id="standard-basic"
-            label="Name"
-            type="text"
-            name="name"
-            value={name}
-            onChange={this.handleChange}
-          />
+          <div className={styles.input}>
+            <Input
+              id="standard-basic"
+              label="Name"
+              type="text"
+              name="name"
+              value={name}
+              onChange={this.handleChange}
+              fullWidth={true}
+            />
+          </div>
+          <div className={styles.input}>
+            <Input
+              id="standard-basic"
+              label="Email"
+              type="email"
+              name="email"
+              value={email}
+              onChange={this.handleChange}
+              fullWidth={true}
+            />
+          </div>
 
-          <Input
-            id="standard-basic"
-            label="Email"
-            type="email"
-            name="email"
-            value={email}
-            onChange={this.handleChange}
-          />
+          <div className={styles.input}>
+            <Input
+              id="standard-basic"
+              label="Password"
+              type="password"
+              name="password"
+              value={password}
+              onChange={this.handleChange}
+              fullWidth={true}
+            />
+          </div>
 
-          <Input
-            id="standard-basic"
-            label="Password"
-            type="password"
-            name="password"
-            value={password}
-            onChange={this.handleChange}
-          />
-
-          <Button type="submit" variant="outlined" color="primary">
+          <button type="submit" className={styles.submitButton}>
             Sign Up
-          </Button>
+          </button>
         </form>
-        Уже есть аккаунт? войдите
-        <NavLink
-          to="/login"
-          exact
-          style={styles.link}
-          activeStyle={styles.activeLink}
-        >
-          Log In
-        </NavLink>
       </div>
     );
   }

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import Input from '@material-ui/core/TextField';
 import styles from './ContactForm.module.css';
 import { addContact } from '../../redux/phoneBook/phoneBook-operations';
 
@@ -29,28 +30,32 @@ class ContactForm extends React.Component {
   render() {
     return (
       <div className={styles.wrapper}>
-        <form className={styles.form} onSubmit={this.onSubmit}>
-          <label>
-            <h2 className={styles.title_form}>Name</h2>
-            <input
+        <form onSubmit={this.onSubmit}>
+          <div className={styles.input}>
+            <Input
               type="name"
               name="name"
+              id="standard-basic"
+              label="Name"
               value={this.state.name}
               onChange={this.handleChange}
-              className={styles.input}
+              fullWidth={true}
             />
-          </label>
-          <label>
-            <h2 className={styles.title_form}>Number</h2>
-            <input
+          </div>
+
+          <div className={styles.input}>
+            <Input
               type="tel"
               name="number"
+              id="standard-basic"
+              label="Number"
               value={this.state.number}
               onChange={this.handleChange}
-              className={styles.input}
+              fullWidth={true}
             />
-          </label>
-          <button className={styles.add_contact_btn} type="submit">
+          </div>
+
+          <button className={styles.button} type="submit">
             Add contact
           </button>
         </form>

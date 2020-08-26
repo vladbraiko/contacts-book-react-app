@@ -1,22 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Filter.module.css';
+import Input from '@material-ui/core/TextField';
 import { connect } from 'react-redux';
 import { filterContacts } from '../../redux/phoneBook/phoneBook-actions';
 import { getFilter } from '../../redux/phoneBook/phoneBook-selectors';
 
 function Filter({ value, onChange }) {
   return (
-    <div className={styles.blockFilter}>
-      <label className={styles.filter_title}>
-        Find contacts by name
-        <input
-          className={styles.input}
-          type="text"
-          value={value}
-          onChange={onChange}
-        />
-      </label>
+    <div className={styles.input}>
+      <Input
+        type="text"
+        label="Filter contacts by name"
+        fullWidth={true}
+        value={value}
+        onChange={onChange}
+      />
     </div>
   );
 }
