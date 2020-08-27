@@ -5,6 +5,7 @@ import AppBar from './components/AppBar/AppBar';
 import PrivateRout from './components/PrivateRout';
 import PublicRout from './components/PublicRout';
 import { getCurrentUser } from './redux/auth/auth-operations';
+
 import styles from './App.module.css';
 
 const HomeView = lazy(() => import('./views/HomeView'));
@@ -21,7 +22,7 @@ class App extends Component {
     return (
       <div className={styles.container}>
         <AppBar />
-        <Suspense fallback={<p>Loading...</p>}>
+        <Suspense fallback={<p>...</p>}>
           <Switch>
             <Route exact path="/" component={HomeView} />
             <PublicRout
