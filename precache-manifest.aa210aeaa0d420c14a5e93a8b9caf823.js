@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b795f3954099366459dde4ae4d95e1ce",
+    "revision": "8b691291f1780db0c91be486ec7107e6",
     "url": "/contacts-book-react-app/index.html"
   },
   {
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contacts-book-react-app/static/css/7.c3815c69.chunk.css"
   },
   {
-    "revision": "571cfa29b86444b79ad9",
+    "revision": "95b09398ae678ee3feae",
     "url": "/contacts-book-react-app/static/css/main.4ea905ad.chunk.css"
   },
   {
@@ -56,8 +56,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contacts-book-react-app/static/js/7.c593c3d7.chunk.js"
   },
   {
-    "revision": "571cfa29b86444b79ad9",
-    "url": "/contacts-book-react-app/static/js/main.f01528d6.chunk.js"
+    "revision": "95b09398ae678ee3feae",
+    "url": "/contacts-book-react-app/static/js/main.54c5cfe4.chunk.js"
   },
   {
     "revision": "5ddef10c276ad1795e78",
