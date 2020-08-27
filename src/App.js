@@ -24,7 +24,7 @@ class App extends Component {
         <AppBar />
         <Suspense fallback={<p>...</p>}>
           <Switch>
-            <Route exact path="/c" component={HomeView} />
+            <Route exact path="/contacts-book-react-app" component={HomeView} />
             <PublicRout
               path="/register"
               component={RegisterView}
