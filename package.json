@@ -1,5 +1,6 @@
 {
-  "name": "phone-book-ls",
+  "name": "contacts-book-react-app",
+  "homepage": "https://vladbraiko.github.io/contacts-book-react-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
